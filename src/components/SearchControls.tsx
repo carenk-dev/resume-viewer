@@ -1,10 +1,10 @@
 interface Props {
-  query:string
-  onChange: (value: string)=> void
+  query: string;
+  onChange: (value: string) => void;
 }
 
-function SearchControls({query, onChange}:Props){
-  return(
+function SearchControls({ query, onChange }: Props) {
+  return (
     <div className="mb-6">
       <input
         type="text"
@@ -14,6 +14,6 @@ function SearchControls({query, onChange}:Props){
         onChange={(e) => onChange(e.target.value)}
       />
     </div>
-  )
+  );
 }
 export default SearchControls;
