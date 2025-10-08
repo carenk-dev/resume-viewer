@@ -2,12 +2,7 @@ import { useState } from "react";
 import FileControls from "./components/FileControls";
 import SearchControls from "./components/SearchControls";
 import ResumeList from "./components/ResumeList";
-
-interface Resume {
-  id: number;
-  title: string;
-  description: string;
-}
+import type { Resume } from "./types/resume";
 
 function App() {
   const [resumes, setResumes] = useState<Resume[]>([]);
@@ -20,18 +15,33 @@ function App() {
         title: "レジュメ管理ツールの新規開発",
         description:
           "レジュメ管理ツールの保守・運用を行いました。フロントエンジニアとして参加し、React、typescript、viteを使用して環境構築から行いました。",
+        duration: "期間",
+        features: ["特徴", "test"],
+        phases: ["工程"],
+        scale: "規模",
+        environment: ["環境"],
       },
       {
         id: 2,
         title: "食材・栄養管理サービスの開発・保守",
         description:
           "食材・栄養管理サービスの開発・保守を行いました。サーバーサイドはruby on rails、フロントエンドはReact、インフラはdockerを使用しており、フルスタックエンジニアとして作業を行いました。",
+        duration: "期間",
+        features: ["特徴"],
+        phases: ["工程"],
+        scale: "規模",
+        environment: ["環境"],
       },
       {
         id: 3,
         title: "プログラミング教育サービスの開発・保守",
         description:
           "プログラミング教育サービスの開発・保守を行いました。サーバーサイドの担当として、障害対応やリファクタリング、軽微な機能追加を主に担当していました。",
+        duration: "期間",
+        features: ["特徴"],
+        phases: ["工程"],
+        scale: "規模",
+        environment: ["環境"],
       },
     ];
     setResumes(dummyData);
